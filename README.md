@@ -55,6 +55,7 @@ This is currently being worked on for submission. Please visit https://youtu.be/
 
 ### License
 ![Image of Badge](https://img.shields.io/badge/License-Northwestern%20University-brightgreen)
+
 Copyright ©2020 Tressa Park
 
 ### Questions
