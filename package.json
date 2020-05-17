@@ -11,7 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/TressaPark/burger.git"
   },
+<<<<<<< HEAD
   "author": "Tressa Park | Northwestern University | Chicago",
+=======
+  "author": "",
+>>>>>>> origin
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TressaPark/burger/issues"
