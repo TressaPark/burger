@@ -1,4 +1,4 @@
-<li>
+{{!-- <li>
 	{{name}}
 
 	<button class="change-eaten" data-id="{{id}}" data-neweaten="{{eaten}}">
@@ -6,4 +6,13 @@
 	</button>
 
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li> --
+
+<li class="list-group-item input-group">
+    <span class="name">{{burger_name}} burger</span>
+    {{#if devoured}}
+        {{!-- No button --}}
+    {{else}}
+        <button class="devour btn btn-outline-red float-right" data-id="{{id}}" type="button" id="button-addon2">Devour</button>
+    {{/if}}
 </li>
