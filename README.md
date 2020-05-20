@@ -46,7 +46,7 @@ If you would like to run this project locally, users will have to run *npm i*.
 
 ### Build Status
 
-This is currently being worked on for submission. Please visit https://youtu.be/XXXXX-XXXXX for a live demo.
+This is currently being worked on for submission. Please visit https://morning-spire-80921.herokuapp.com/ to view my application.
 
 ### Credits
 
