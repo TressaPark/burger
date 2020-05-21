@@ -1,3 +1,4 @@
+
 // set up MySQL connection
 var mysql = require("mysql");
 var connection;
@@ -12,19 +13,16 @@ if (process.env.JAWSDB_URL) {
     password: "root1234",
     database: "burger_db"
   });
-};
+}
 
 //if err throw error
-connection.connect();
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
+
+//make connection
 module.exports = connection;
-
-// (function (err) {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + connection.threadId);
-// });
-
-// //make connection
-// module.exports = connection;

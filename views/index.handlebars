@@ -1,16 +1,15 @@
 <div class="container">
   <div class="row">
-    {{!-- <div class="col-xs-12 text-center enter_section" id="top-bar"> --}}
-
-    {{!-- </div> --}}
+    <div class="col-xs-12 text-center enter_section" id="top-bar">
+    </div>
   </div>
 </div>
-{{!-- container where entries appear alongside a button  --}}
 <div class="container">
   <div class="row">
     <div id="image" class="mx-auto" class="img-fluid">
       <img src="/img/veggieburger copy.png" alt="veggie burger image" />
-      <margin-top = 25px></margin-top>
+      <margin-top=25px>
+        </margin-top>
     </div>
   </div>
 </div>
@@ -18,27 +17,30 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
-      {{#each burgers}}
+      {{#each burger_data}}
       {{#unless this.devoured}}
+      {{!-- this div contains the burger name inputed in the form at the bottom of screen --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
-        <h4>{{this.id}}. {{this.name}}</h4>
+        <h4>{{this.id}}. {{this.burger_name}}</h4>
       </div>
+      {{!-- this div contains the devour button with PUT method --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
         <form class="button-size">
+          {{!-- <form method="POST" action="/burgers/update?_method=PUT" class="button-size"> --}}
           <input type="hidden" name="burger_id" type="text" value={{this.id}}>
-          <button type="submit" class="btn btn-success change-devoured" id={{this.id}}
-            newdevoured={{this.devoured}}>Devour</button>
+          <button type="button" class="btn btn-dark change-devoured" id={{this.id}}
+            newdevoured={{this.devoured}}>DEVOUR</button>
         </form>
       </div>
       {{/unless}}
       {{/each}}
     </div>
     <br>
-    {{!-- this div holds code to ensure the text and buttons don't disappear but move to another side of the page after the devour button is pressed --}}
+    {{!-- this div holds code to ensure the text and buttons don't disappear but move to another side of the page after the devour botton is pressed --}}
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
-      {{#each burgers}}
+      {{#each burger_data}}
       {{#if this.devoured}}
-      <input class="form-control" type="text" placeholder="{{this.id}}. {{this.name}}" readonly>
+      <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}">
       {{/if}}
       {{/each}}
     </div>
@@ -49,11 +51,13 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center enter_section">
-      <form>
+      <form action="/burgers/create" method="POST">
         <input type="text" name="burger_name" class="form-control" value="" id="burgerName">
-        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-        <h6>Enter a burger you want to devour and click submit!</h6>
+        <br>
+        <button type="success" class="btn btn-success" id="text-enter-button">SUBMIT :D</button>
+        <h6>Enter a burger to devour and click submit!</h6>
       </form>
     </div>
   </div>
 </div>
+<br>

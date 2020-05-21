@@ -1,2 +1,5 @@
-INSERT INTO burgers (name, devoured)
-VALUES ('Veggie'), ('Beyond'), (Impossible), (Boca);
+INSERT INTO burgers
+    (name, devoured)
+VALUES
+    ('Veggie', FALSE),
+    ('Beyond', FALSE),
