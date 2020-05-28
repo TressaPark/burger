@@ -1,9 +1,9 @@
-var connect = require("./connection.js")
+const connection = require("./connection.js")
 
 //create an object that encompasses all the three methods below:
-var orm= {
+let orm= {
     // create method to select all - selectAll()
-    all: function(tableName, toModels){
+    selectAll: function(tableName, toModels){
         //mysql query to get the whole table burger_db.burgers
         connect.query('SELECT * FROM ' + tableName + ';' , function(err, result){
             if (err) throw err;

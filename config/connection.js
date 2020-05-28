@@ -1,7 +1,7 @@
 
 // set up MySQL connection
-var mysql = require("mysql");
-var connection;
+const mysql = require("mysql");
+let connection;
 
 // If the server contains the JAWSDB_URL variable, it connects to the JawsDB database
 if (process.env.JAWSDB_URL) {
