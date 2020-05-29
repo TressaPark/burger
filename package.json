@@ -2,8 +2,8 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "13 Node Express Handlebars",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
