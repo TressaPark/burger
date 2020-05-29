@@ -1,4 +1,4 @@
-const connection = require("./connection.js")
+const connection = require("/connection.js")
 
 //create an object that encompasses all the three methods below:
 let orm= {

@@ -1,4 +1,4 @@
-let routes = require("./controller/burgers_controller");
+let routes = require("/controllers/burgersController");
 const express = require("express");
 
 var PORT = process.env.PORT || 8080;
