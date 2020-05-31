@@ -28,7 +28,7 @@
           {{!-- <form method="POST" action="/burgers/update?_method=PUT" class="button-size"> --}}
           <input type="hidden" name="burger_id" type="text" value={{this.id}}>
           <button type="button" class="btn btn-dark devoured change-devoured" data-id={{this.id}}
-            newdevoured={{this.devoured}}>Da-Vour</button>
+            newdevoured={{this.devoured}}>da-Vour</button>
         </form>
       </div>
       {{/unless}}
@@ -37,7 +37,7 @@
     <br>
     {{!-- this div holds code to ensure the text and buttons don't disappear but move to another side of the page after the devour botton is pressed --}}
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
-      <h4>Da-Voured</h4>
+      <h4>da-voured</h4>
       <ul style="list-style-type:none;">
       {{#each burgers}}
       {{#if this.devoured}}
@@ -59,7 +59,7 @@
         <input type="text" name="name" class="form-control" value="" id="burgerName">
         <br>
         <button type="success" class="btn btn-success submit" id="submit">SUBMIT :D</button>
-        <h6>Enter a burger to devour and click submit!</h6>
+        <h6>Enter a burger to da-vour and click submit!</h6>
       </form>
     </div>
   </div>
