@@ -1,6 +1,5 @@
 <div class="container">
   <div class="row">
-    {{!-- <h1>Eat Da Burger!</h1> --}}
     <div class="col-xs-12 text-center enter_section" id="top-bar">
       <div id="image" class="mx-auto" class="img-fluid">
         <img src="/img/veggieburgercopy.png" alt="veggie burger image" />
@@ -19,9 +18,9 @@
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
       {{#each burgers}}
       {{#unless this.devoured}}
-      {{!-- this div contains the burger name inputed in the form at the bottom of screen --}}
+      {{!-- this div contains the burger name input in the form at the bottom of screen --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
-        <h4>{{this.name}}</h4>
+        <h5>{{this.name}}</h5>
       </div>
       {{!-- this div contains the devour button with PUT method --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
@@ -38,7 +37,7 @@
     <br>
     {{!-- this div holds code to ensure the text and buttons don't disappear but move to another side of the page after the devour botton is pressed --}}
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
-      <h3>Da-Voured</h3>
+      <h4>Da-Voured</h4>
       <ul style="list-style-type:none;">
       {{#each burgers}}
       {{#if this.devoured}}
