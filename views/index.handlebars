@@ -13,7 +13,6 @@
     </div>
   </div>
 </div>
-
 {{!-- container where entries appear alongside a button then move to the right side as readonly  --}}
 <div class="container">
   <div class="row">
@@ -22,7 +21,6 @@
       {{#each burgers}}
       {{#unless this.devoured}}
       {{!-- this div contains the burger name input in the form at the bottom of screen --}}
-      {{!-- <br> --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-left">
         <h6>{{this.name}}</h6>
          <ul style="list-style-type: square;"></ul>
@@ -31,7 +29,7 @@
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-left">
         <form class="button-size">
           <input type="hidden" name="burger_id" type="text" value={{this.id}}>
-          <button type="button" class="btn btn-success change-devoured" data-id={{this.id}}
+          <button type="button" class="btn btn-dark devoured change-devoured" data-id={{this.id}}
             newdevoured={{this.devoured}}>DA-vour</button>
             <br>
             <br>
