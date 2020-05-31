@@ -1,4 +1,3 @@
-let routes = require("/controllers/burgersController");
 const express = require("express");
 
 var PORT = process.env.PORT || 8080;
@@ -16,7 +15,7 @@ app.use(express.json());
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
+let routes = require("./controllers/burgersController");
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.

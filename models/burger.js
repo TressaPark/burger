@@ -10,7 +10,7 @@ var burger = {
     },
     insertOne: function (options, cb) {
         // console.log(id, fromORMtoRoutes);
-        orm.insertOne("burgers", options, function (res) {
+        orm.create("burgers", options, function (res) {
             cb(res);
         });
     },

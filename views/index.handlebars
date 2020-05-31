@@ -1,27 +1,27 @@
 <div class="container">
   <div class="row">
-    <h1>Eat Da Burger!</h1>
+    {{!-- <h1>Eat Da Burger!</h1> --}}
     <div class="col-xs-12 text-center enter_section" id="top-bar">
       <div id="image" class="mx-auto" class="img-fluid">
-        <img src="/public/img/veggieburger copy.png" alt="veggie burger image"/>
+        <img src="/img/veggieburgercopy.png" alt="veggie burger image" />
         <margin-top=25px>
           </margin-top>
       </div>
     </div>
   </div>
-    <div class="row">
-    </div>
+  <div class="row">
   </div>
+</div>
 </div>
 {{!-- container where entries appear alongside a button then move to the right side as readonly  --}}
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
-      {{#each burger_data}}
+      {{#each burgers}}
       {{#unless this.devoured}}
       {{!-- this div contains the burger name inputed in the form at the bottom of screen --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
-        <h4>{{this.id}}. {{this.burger_name}}</h4>
+        <h4>{{this.name}}</h4>
       </div>
       {{!-- this div contains the devour button with PUT method --}}
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
@@ -38,11 +38,16 @@
     <br>
     {{!-- this div holds code to ensure the text and buttons don't disappear but move to another side of the page after the devour botton is pressed --}}
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center" class="task">
-      {{#each burger_data}}
+      <h3>Devoured Before Time</h3>
+      <ul style="list-style-type:none;">
+      {{#each burgers}}
       {{#if this.devoured}}
-      <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}">
+  <li>
+    {{this.name}}
+  </li>
       {{/if}}
       {{/each}}
+      </ul>
     </div>
   </div>
 </div>
@@ -51,10 +56,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center enter_section">
-      <form action="/burgers/create" method="POST">
-        <input type="text" name="burger_name" class="form-control" value="" id="burgerName">
+      <form>
+        <input type="text" name="name" class="form-control" value="" id="burgerName">
         <br>
-        <button type="success" class="btn btn-success" id="text-enter-button">SUBMIT :D</button>
+        <button type="success" class="btn btn-success submit" id="submit">SUBMIT :D</button>
         <h6>Enter a burger to devour and click submit!</h6>
       </form>
     </div>

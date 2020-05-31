@@ -11,13 +11,15 @@ $(function () {
     });
   });
 
-  $(".create-form").on("submit", function (event) {
+  $("#submit").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-    if ($("#ca").val().trim() != "") {
+    alert("clicked");
+    if ($("#burgerName").val().trim() != "") {
       let newBurger = {
-        name: $("#ca").val().trim(),
+        name: $("#burgerName").val().trim(),
       };
+      console.log(newBurger);
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
