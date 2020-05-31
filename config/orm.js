@@ -1,4 +1,4 @@
-const connection = require("./connection.js")
+var connection = require("./connection.js")
 
 //create an object that encompasses all the three methods below:
 let orm= {
@@ -12,12 +12,13 @@ let orm= {
         })
     },
     //update the boolean value of devoured column
-    update: function(tableName, condition, toModels){
-        console.log(tableName, condition, toModels)
-        connection.query('UPDATE ' + tableName + ' SET devoured=true WHERE id='+ condition+ ';' , function(err, result){
+    update: function(tableName, id, cb){
+        let queryString = `UPDATE ${tableName} SET devoured=1 where id=${id};`;
+        console.log(queryString);
+        connection.query(queryString, function(err, result){
             if (err) throw err;
             //takes the result of the query and exports it to the models burger.js
-            toModels(result);
+            cb(result);
         })
     },
     create: function(tableName, val, toModels) {

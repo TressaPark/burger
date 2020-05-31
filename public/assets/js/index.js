@@ -14,7 +14,6 @@ $(function () {
   $("#submit").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-    alert("clicked");
     if ($("#burgerName").val().trim() != "") {
       let newBurger = {
         name: $("#burgerName").val().trim(),
