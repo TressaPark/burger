@@ -50,8 +50,11 @@ This is currently being worked on for submission. Please visit (https://morning-
 
 ### Credits
 
-* My talented tutor, Frederica Blissett
-* Inspired by Week 13 Class Activity: 17-CatsApp, Northwestern University Full-Stack Coding Bootcamp
+* Tressa Park, Northwestern University
+* Paul Cwik, TA, Northwestern University
+* Jill Westerfelhaus, fellow student, Northwestern University
+* Frederica Blissett, tutor, Varsity Tutors
+* Inspired by Week 13 Class Activity: 17-CatsApp, Northwestern University
 
 ### License
 ![Image of Badge](https://img.shields.io/badge/License-Northwestern%20University-brightgreen)
